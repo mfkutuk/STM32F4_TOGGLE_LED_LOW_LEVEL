@@ -1,12 +1,12 @@
-/*  Led açip kapatma uygulamasi dogrudan registerler kodlanarak yapildi
-		Registerlere ilgili bitin durumunu girmek için bit islemleri kullanilir
+/*  Led aÃ§ip kapatma uygulamasi dogrudan registerler kodlanarak yapildi
+		Registerlere ilgili bitin durumunu girmek iÃ§in bit islemleri kullanilir
 		&(ve), |(veya) , ~(degili), ^(XOR),  <<(sola kaydir),  >>(saga kaydir) baslica bit islem sembolleridir
 		
 		Blink application directly done by coding register
 		Bit operations are used to enter the state of the corresponding bit
 		&(and), |(or) , ~(Bitwise complement), ^(XOR), <<(shift left), >>(shift right) are primary bit operation symbols
 		
-		  p   q   p&q   p|q   ~(p&q)   p^q
+		 	p   q   p&q   p|q   ~(p&q)   p^q
 			0   0    0     0       1      0
 			1   0    0     1       1      1
 			0   1    0     1       1      1
@@ -38,7 +38,7 @@ int main(void)
 	
 	while(1) 
 	{
-		// döngüye her girisinde ODR register'inin 12. 13. 14. 15. pinlerle 
+		// dÃ¶ngÃ¼ye her girisinde ODR register'inin 12. 13. 14. 15. pinlerle 
 		// each loop make ODR register's pins 12 13 14 and 15 to high to low and low to high (1 to 0 and after loop 0 to 1...)
 		GPIOD->ODR^=1<<12;
 		GPIOD->ODR^=1<<13;
